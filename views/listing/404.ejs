@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404 | Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Optional: Bootstrap CDN for quick styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .not-found-container {
+            text-align: center;
+            padding: 2rem 3rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+        }
+        .not-found-title {
+            font-size: 3rem;
+            color: #dc3545;
+        }
+        .not-found-message {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .home-link {
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .home-link:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="not-found-container">
+        <div class="not-found-title">404</div>
+        <div class="not-found-message">
+            Oops! The page you are looking for does not exist.<br>
+            <%= typeof err !== 'undefined' && err.message ? err.message : '' %>
+        </div>
+        <a href="/" class="home-link">Go to Home</a>
+        <div class="mt-4 text-muted" style="font-size: 0.9rem;">
+            &copy; <%= new Date().getFullYear() %> BeeHome Private Limited
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+body{
+  background-image: url(/images/meiying-ng-OrwkD-iWgqg-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+  flex: 1;
+}
+
+/* NAV-BAR */
+.navbar{
+  height: 5rem;
+   background-color: #f7cad0;
+}
+.fa-house-chimney{
+  color:#ff0a54;
+  font-size:1.5rem;
+}
+.nav-link{
+  color: #ff0a54 !important;        /* to override other styling maybe bootstraps */
+ 
+}
+
+/* FOOTER */
+
+
+
+.f-info-links a{
+  text-decoration: none;
+  color: #222222
+}
+
+.f-info-links a:hover{
+  text-decoration: underline;
+  color:#ff0a54
+}
+
+.f-info{
+  height:5rem;
+  display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: space-evenly;
+background-color: #ea84c9;
+text-align: center;
+
+
+}
+.f-info-links, .f-info-socials, .f-info-brand{
+  width: 100%;
+  display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.f-info-socials i{
+  margin-right: 0.3rem;
+  font-size: 1rem;
+
+}
+
+
+/* CARDS */
+
+.listing-card{
+  border: none !important;
+  margin-bottom: 2rem;
+   background: transparent;
+
+  }
+  .card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+  .card-body{
+    padding: 0 !important;
+  }
+
+  .card-text p{
+ font-weight: 400;
+ }
+
+ .listing-link{
+  text-decoration: none;
+ }
+ 
+ /* card-effect */
+ .card-img-overlay{
+  opacity:0;
+ }
+
+ .card-img-overlay:hover{
+opacity: 0.2;
+background-color: white;
+ }
+
+
+
+ /* New-Page */    /* Edit-Button */
+
+ .add-button, .edit-button, .signup-button,.login-button{
+  color:#f7cad0 !important;
+ background-color: #ff0a54 !important; 
+
+ border: none;
+ }
+ .add-button:hover, .edit-button:hover, .signup-button:hover,.login-button:hover{
+  color:#ff0a54 !important;
+ background-color: #f7cad0 !important; 
+ border: 2px solid #ff0a54 !important;
+
+ }
+
+/* Show-page */
+
+ .show-img{
+ height:30vh;
+ }
+
+ .btns{
+  display: flex;
+
+ }
+
+.delete-button:hover{
+
+   color:white !important;
+ background-color: #fb6f92 !important; 
+ border: 2px solid white !important;
+
+}
+
+.show-card{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.submit-button{
+  color: whitesmoke !important;
+ background-color: #4361ee !important; 
+ border: none;
+
+}
+
+.submit-button:hover{
+   color:white !important;
+ background-color: #6411ad !important; 
+ border: 2px solid white !important;
+
+}
+
+#map{
+  height: 400px;
+  width: 80vp;
+}
+
+.review-card{
+  background-color: #ffacc5;
+}
