@@ -35,7 +35,7 @@ app.use(methodOverride("_method")); //for method-override
 app.engine("ejs", ejsMate); //for ejs-mate
 app.use(express.static(path.join(__dirname, "/public")));
 
-const dbUrl = "mongodb://127.0.0.1:27017/BeeHome";
+const dbUrl = process.env.ATLASDB_URL;
 
 main()
   .then(() => {
