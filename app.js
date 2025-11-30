@@ -22,23 +22,44 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https:",  "https://api.mapbox.com",
-  "https://cdnjs.cloudflare.com"],
-        styleSrc: ["'self'", "'unsafe-inline'", "https:",   "https://api.mapbox.com",
-  "https://fonts.googleapis.com",],
-        imgSrc: ["'self'", "https:", "data:",   "https://api.mapbox.com",
-  "https://events.mapbox.com",],
-        connectSrc: ["'self'", "https:",   "https://api.mapbox.com",
-  "https://*.tiles.mapbox.com",
-  "https://events.mapbox.com",],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-eval'",
+          "https://api.mapbox.com",
+          "https://cdnjs.cloudflare.com",
+          "blob:"
+        ],
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://api.mapbox.com",
+          "https://fonts.googleapis.com"
+        ],
+        imgSrc: [
+          "'self'",
+          "data:",
+          "blob:",
+          "https://api.mapbox.com",
+          "https://events.mapbox.com"
+        ],
+        connectSrc: [
+          "'self'",
+          "https://api.mapbox.com",
+          "https://*.tiles.mapbox.com",
+          "https://events.mapbox.com"
+        ],
         fontSrc: ["'self'", "https:", "data:"],
         objectSrc: ["'none'"],
+        workerSrc: ["'self'", "blob:"],  // ✅ allow Web Workers
+        childSrc: ["'self'", "blob:"],   // ✅ fallback for old browsers
         baseUri: ["'self'"],
-        frameAncestors: ["'none'"],
+        frameAncestors: ["'none'"]
       },
     },
   })
 );
+
 
 
 //routing
