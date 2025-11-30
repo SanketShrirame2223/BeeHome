@@ -35,7 +35,6 @@ app.use(
         objectSrc: ["'none'"],
         baseUri: ["'self'"],
         frameAncestors: ["'none'"],
-],
       },
     },
   })
