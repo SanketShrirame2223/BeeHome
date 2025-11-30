@@ -17,49 +17,6 @@ const User = require("./models/user.js");
 const MongoStore = require("connect-mongo"); //for session on mongo
 const helmet = require("helmet");
 
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["self"],
-        scriptSrc: [
-          "self",
-          "unsafe-inline",
-          "unsafe-eval",
-          "https://api.mapbox.com",
-          "https://cdnjs.cloudflare.com",
-          "blob:"
-        ],
-        styleSrc: [
-          "self",
-          "unsafe-inline",
-          "https://api.mapbox.com",
-          "https://fonts.googleapis.com"
-        ],
-        imgSrc: [
-          "self",
-          "data:",
-          "blob:",
-          "https://api.mapbox.com",
-          "https://events.mapbox.com"
-        ],
-        connectSrc: [
-          "self",
-          "https://api.mapbox.com",
-          "https://*.tiles.mapbox.com",
-          "https://events.mapbox.com"
-        ],
-        fontSrc: ["self", "https:", "data:"],
-        objectSrc: ["none"],
-        workerSrc: ["self", "blob:"],  // ✅ allow Web Workers
-        childSrc: ["self", "blob:"],   // ✅ fallback for old browsers
-        baseUri: ["self"],
-        frameAncestors: ["none"]
-      },
-    },
-  })
-);
-
 
 
 //routing
