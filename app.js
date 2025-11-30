@@ -21,40 +21,40 @@ app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        defaultSrc: ["'self'"],
+        defaultSrc: ["self"],
         scriptSrc: [
-          "'self'",
-          "'unsafe-inline'",
-          "'unsafe-eval'",
+          "self",
+          "unsafe-inline",
+          "unsafe-eval",
           "https://api.mapbox.com",
           "https://cdnjs.cloudflare.com",
           "blob:"
         ],
         styleSrc: [
-          "'self'",
-          "'unsafe-inline'",
+          "self",
+          "unsafe-inline",
           "https://api.mapbox.com",
           "https://fonts.googleapis.com"
         ],
         imgSrc: [
-          "'self'",
+          "self",
           "data:",
           "blob:",
           "https://api.mapbox.com",
           "https://events.mapbox.com"
         ],
         connectSrc: [
-          "'self'",
+          "self",
           "https://api.mapbox.com",
           "https://*.tiles.mapbox.com",
           "https://events.mapbox.com"
         ],
-        fontSrc: ["'self'", "https:", "data:"],
-        objectSrc: ["'none'"],
-        workerSrc: ["'self'", "blob:"],  // ✅ allow Web Workers
-        childSrc: ["'self'", "blob:"],   // ✅ fallback for old browsers
-        baseUri: ["'self'"],
-        frameAncestors: ["'none'"]
+        fontSrc: ["self", "https:", "data:"],
+        objectSrc: ["none"],
+        workerSrc: ["self", "blob:"],  // ✅ allow Web Workers
+        childSrc: ["self", "blob:"],   // ✅ fallback for old browsers
+        baseUri: ["self"],
+        frameAncestors: ["none"]
       },
     },
   })
